@@ -3,24 +3,24 @@ import { useState } from 'react'
 const services = [
   {
     num: '01',
-    title: 'Building Solutions',
-    desc: 'Complete timber frame construction for residential and commercial projects — from concept to final build.',
-    image: '/images/service-building.png',
-    features: ['Custom Design', 'Quality Materials', 'Expert Team']
+    title: 'Timber Supply',
+    desc: 'We supply premium pine timber sourced through reliable channels, ensuring uniform grading and regular availability for bulk and ongoing requirements.',
+    image: '/images/service-logging.png',
+    features: ['Premium Pine Timber', 'Uniform Grading', 'Bulk Availability']
   },
   {
     num: '02',
-    title: 'Logging Services',
-    desc: 'Professional and responsible logging operations using modern equipment and sustainable harvesting practices.',
-    image: '/images/service-logging.png',
-    features: ['Modern Equipment', 'Certified Loggers', 'Eco-Friendly']
+    title: 'Sawmill & Custom Sizes',
+    desc: 'With in-house sawmill facilities, we cut timber into customized sizes including planks and sleepers as per client specifications.',
+    image: '/images/hero-sawmill.png',
+    features: ['In-House Sawmill', 'Custom Planks & Sleepers', 'Client-Spec Cutting']
   },
   {
     num: '03',
-    title: 'Forestry & Timber',
-    desc: 'Sustainable forest management and premium timber sourcing for quality wood products delivered worldwide.',
-    image: '/images/service-forestry.png',
-    features: ['Global Sourcing', 'Premium Grades', 'Fast Delivery']
+    title: 'Packaging & Delivery',
+    desc: 'We also provide wooden packaging solutions and coordinate bulk logistics to ensure safe and timely delivery across India.',
+    image: '/images/hero-packaging.jpg',
+    features: ['Wooden Packaging', 'Bulk Logistics', 'Pan-India Delivery']
   },
 ]
 
@@ -47,8 +47,7 @@ export default function Services() {
           <span className="section-tag srv__tag">What We Do</span>
           <h2 className="srv__title">Expert Timber<br/>Solutions For<br/>Every Need</h2>
           <p className="srv__subtitle">
-            Three decades of delivering precision milling, 
-            sustainable forestry, and premium wood products.
+            Backed by over a century of generational experience in the timber business, S.A Global Venture delivers premium pine, jungle wood, and hardwood solutions with consistent quality, accurate grading, and bulk availability across India.
           </p>
 
           {/* Service tabs */}

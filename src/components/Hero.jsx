@@ -3,33 +3,33 @@ import { useState, useEffect, useCallback } from 'react'
 const slides = [
   {
     image: '/images/hero-sawmill.png',
-    subtitle: 'Since 1998 — Trusted Worldwide',
-    title: 'Where Nature Meets Craftsmanship',
-    desc: 'Premium sawmill services delivering excellence in every cut, every grain, every project.',
-    highlight: 'Craftsmanship',
-    cta: 'Explore Services',
-    href: '#services',
-    stat: { number: '25+', label: 'Years Legacy' }
+    subtitle: 'Since 1970 — TRUSTED TIMBER PARTNER ACROSS INDIA',
+    title: 'Quality Timber Delivered Reliably',
+    desc: 'Supplying premium pine timber and jungle wood with consistent grading, assured availability, and transparent dealing for manufacturers, builders, and traders across India.',
+    highlight: 'Reliably',
+    cta: 'Get Quotation',
+    href: '#quote',
+    stat: { number: '100+', label: 'Years Legacy' }
   },
   {
-    image: '/images/hero-forest.png',
-    subtitle: 'Committed to Sustainability',
-    title: 'Rooted in Nature, Built to Last',
-    desc: 'Responsible forestry practices ensuring the finest quality timber for generations to come.',
-    highlight: 'Nature,',
-    cta: 'Our Story',
-    href: '#about',
-    stat: { number: '480+', label: 'Projects Delivered' }
+    image: '/images/hero-packaging.jpg',
+    subtitle: 'INDUSTRIAL WOODEN PACKAGING SOLUTIONS',
+    title: 'Strong Packaging. Reliable Protection Durability',
+    desc: 'Manufacturing high-strength wooden pallets, crates, and boxes designed for safe storage, handling, and transportation across industrial and export supply chains.',
+    highlight: 'Durability',
+    cta: 'Get Packaging Quote',
+    href: '#quote',
+    stat: { number: '480+', label: 'HEAVY DUTY PACKAGING' }
   },
   {
     image: '/images/hero-timber.png',
-    subtitle: 'Master Grade Timber',
-    title: 'The Art of Exceptional Woodwork',
-    desc: 'Hand-selected, precision-milled timber products crafted for those who demand the extraordinary.',
-    highlight: 'Exceptional',
-    cta: 'View Collection',
-    href: '#products',
-    stat: { number: '1.2K', label: 'Happy Clients' }
+    subtitle: 'IN-HOUSE SAWMILL OPERATIONS',
+    title: 'Custom Sizes. Precision Cutting Accuracy',
+    desc: 'Equipped with in-house sawmill facilities, we cut pine timber into customized sizes including planks and sleepers as per client drawings, usage, and bulk requirements.',
+    highlight: 'Accuracy',
+    cta: 'GET CUSTOM CUT QUOTE',
+    href: '#quote',
+    stat: { number: '✓', label: 'CUSTOM SIZES AVAILABLE' }
   }
 ]
 

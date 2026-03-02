@@ -225,16 +225,16 @@ ul {
   color: var(--color-primary);
 }
 
-.header__quote-link {
-  color: var(--color-primary-light);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+.header__global-venture {
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-}
-
-.header__quote-link:hover {
-  color: var(--color-primary);
+  background: linear-gradient(135deg, #FFDF73 0%, #D4AF37 50%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header__main {
@@ -1387,36 +1387,138 @@ ul {
   line-height: 1.7;
 }
 
-/* Stats */
-.about__stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  padding: 48px 0;
-  border-top: 1px solid var(--color-border);
+/* Clients We Served - Premium Redesign */
+.about__clients {
+  padding: 56px 0 32px;
+  border-top: none;
+  position: relative;
 }
 
-.about__stat {
-  text-align: center;
-  padding: 24px;
+.about__clients::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), #D4AF37);
+  border-radius: 2px;
 }
 
-.about__stat-number {
-  display: block;
+.about__clients-heading {
   font-family: var(--font-heading);
-  font-size: 3rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: var(--color-primary);
-  line-height: 1;
+  color: var(--color-dark);
+  text-align: center;
   margin-bottom: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.about__stat-label {
-  font-size: 0.875rem;
-  font-weight: 500;
+.about__clients-heading::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--color-primary);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.about__clients-subtext {
+  text-align: center;
+  font-size: 0.9375rem;
   color: var(--color-text);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  margin-bottom: 36px;
+  opacity: 0.75;
+}
+
+.about__clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.about__client-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 22px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-primary);
+  border-radius: 10px;
+  text-align: left;
+  transition: all var(--transition);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.about__client-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(180, 100, 20, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.about__client-card:hover {
+  border-top-color: #D4AF37;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.about__client-card--more {
+  background: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #B8860B 100%);
+  border-color: transparent;
+  border-top-color: rgba(255, 255, 255, 0.4);
+  color: white;
+  box-shadow: 0 8px 24px rgba(180, 130, 10, 0.3);
+}
+
+.about__client-card--more:hover {
+  box-shadow: 0 16px 40px rgba(180, 130, 10, 0.45);
+  transform: translateY(-4px);
+  border-top-color: rgba(255, 255, 255, 0.6);
+}
+
+.about__client-card--more .about__client-name {
+  color: white;
+  font-weight: 700;
+}
+
+.about__client-card--more .about__client-icon-wrap {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.about__client-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(180, 100, 20, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+}
+
+.about__client-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.about__client-name {
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  line-height: 1.4;
 }
 
 /* ===================================

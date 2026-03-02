@@ -124,15 +124,15 @@ export default function CartSidebar() {
                 <form className="cart__order-form" onSubmit={handlePlaceOrder}>
                   <div className="cart__field">
                     <label>Full Name *</label>
-                    <input type="text" name="name" placeholder="John Doe" value={orderForm.name} onChange={handleOrderChange} required />
+                    <input type="text" name="name" placeholder="Rahul Kumar" value={orderForm.name} onChange={handleOrderChange} required />
                   </div>
                   <div className="cart__field">
                     <label>Email *</label>
-                    <input type="email" name="email" placeholder="john@example.com" value={orderForm.email} onChange={handleOrderChange} required />
+                    <input type="email" name="email" placeholder="rahul@example.in" value={orderForm.email} onChange={handleOrderChange} required />
                   </div>
                   <div className="cart__field">
                     <label>Phone *</label>
-                    <input type="tel" name="phone" placeholder="+1 (555) 000-0000" value={orderForm.phone} onChange={handleOrderChange} required />
+                    <input type="tel" name="phone" placeholder="+91 98765 43210" value={orderForm.phone} onChange={handleOrderChange} required />
                   </div>
                   <div className="cart__field">
                     <label>Delivery Address *</label>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 export default function QuoteModal({ isOpen, onClose }) {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', service: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', phone: '', material: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
 
   // Lock body scroll when modal is open
@@ -25,7 +25,7 @@ export default function QuoteModal({ isOpen, onClose }) {
       setSubmitted(false)
       onClose()
     }, 2500)
-    setForm({ name: '', email: '', phone: '', service: '', message: '' })
+    setForm({ name: '', email: '', phone: '', material: '', message: '' })
   }
 
   if (!isOpen) return null
@@ -43,7 +43,7 @@ export default function QuoteModal({ isOpen, onClose }) {
         {/* Header */}
         <div className="qmodal__header">
           <span className="qmodal__tag">Get in Touch</span>
-          <h2 className="qmodal__title">Request a Free Quote</h2>
+          <h2 className="qmodal__title">Request For Quotation</h2>
           <p className="qmodal__desc">
             Fill out the form below and our team will get back to you within 24 hours.
           </p>
@@ -62,33 +62,26 @@ export default function QuoteModal({ isOpen, onClose }) {
           <div className="qmodal__row">
             <div className="qmodal__field">
               <label htmlFor="qm-name">Full Name *</label>
-              <input id="qm-name" type="text" name="name" placeholder="John Doe" value={form.name} onChange={handleChange} required />
+              <input id="qm-name" type="text" name="name" placeholder="Rahul Kumar" value={form.name} onChange={handleChange} required />
             </div>
             <div className="qmodal__field">
               <label htmlFor="qm-email">Email *</label>
-              <input id="qm-email" type="email" name="email" placeholder="john@example.com" value={form.email} onChange={handleChange} required />
+              <input id="qm-email" type="email" name="email" placeholder="rahul@example.in" value={form.email} onChange={handleChange} required />
             </div>
           </div>
           <div className="qmodal__row">
             <div className="qmodal__field">
               <label htmlFor="qm-phone">Phone</label>
-              <input id="qm-phone" type="tel" name="phone" placeholder="+1 (555) 000-0000" value={form.phone} onChange={handleChange} />
+              <input id="qm-phone" type="tel" name="phone" placeholder="+91 98765 43210" value={form.phone} onChange={handleChange} />
             </div>
             <div className="qmodal__field">
-              <label htmlFor="qm-service">Service</label>
-              <select id="qm-service" name="service" value={form.service} onChange={handleChange}>
-                <option value="">Select a service</option>
-                <option value="building">Building Solutions</option>
-                <option value="logging">Logging Services</option>
-                <option value="forestry">Forestry & Timber</option>
-                <option value="shipping">Truck Shipping</option>
-                <option value="other">Other</option>
-              </select>
+              <label htmlFor="qm-material">Material & Quantity</label>
+              <input id="qm-material" type="text" name="material" placeholder="e.g. 5x Oak Trunks" value={form.material} onChange={handleChange} />
             </div>
           </div>
           <div className="qmodal__field">
-            <label htmlFor="qm-msg">Message *</label>
-            <textarea id="qm-msg" name="message" rows="4" placeholder="Tell us about your project..." value={form.message} onChange={handleChange} required />
+            <label htmlFor="qm-msg">Additional Details *</label>
+            <textarea id="qm-msg" name="message" rows="4" placeholder="Tell us more about your requirements..." value={form.message} onChange={handleChange} required />
           </div>
           <button type="submit" className="qmodal__submit">
             Send Request

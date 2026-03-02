@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 export default function RequestQuote() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', service: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', phone: '', material: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (e) => {
@@ -12,7 +12,7 @@ export default function RequestQuote() {
     e.preventDefault()
     setSubmitted(true)
     setTimeout(() => setSubmitted(false), 4000)
-    setForm({ name: '', email: '', phone: '', service: '', message: '' })
+    setForm({ name: '', email: '', phone: '', material: '', message: '' })
   }
 
   return (
@@ -21,7 +21,7 @@ export default function RequestQuote() {
         {/* Left */}
         <div className="quote__info">
           <span className="section-tag">Get in Touch</span>
-          <h2 className="section-title">Request a<br/>Free Quote</h2>
+          <h2 className="section-title">Request For<br/>Quotation</h2>
           <p className="quote__desc">
             Fill out the form and our team will get back to you within 24 hours. 
             We offer free consultation for all projects.
@@ -36,7 +36,7 @@ export default function RequestQuote() {
               </div>
               <div>
                 <span className="quote__detail-label">Phone</span>
-                <a href="tel:+18005552569" className="quote__detail-value">+1 800 555 25 69</a>
+                <a href="tel:+918477819222" className="quote__detail-value">+91 8477 819 222</a>
               </div>
             </div>
 
@@ -78,33 +78,26 @@ export default function RequestQuote() {
             <div className="quote__row">
               <div className="quote__field">
                 <label htmlFor="q-name">Full Name *</label>
-                <input id="q-name" type="text" name="name" placeholder="John Doe" value={form.name} onChange={handleChange} required />
+                <input id="q-name" type="text" name="name" placeholder="Rahul Kumar" value={form.name} onChange={handleChange} required />
               </div>
               <div className="quote__field">
                 <label htmlFor="q-email">Email *</label>
-                <input id="q-email" type="email" name="email" placeholder="john@example.com" value={form.email} onChange={handleChange} required />
+                <input id="q-email" type="email" name="email" placeholder="rahul@example.in" value={form.email} onChange={handleChange} required />
               </div>
             </div>
             <div className="quote__row">
               <div className="quote__field">
                 <label htmlFor="q-phone">Phone</label>
-                <input id="q-phone" type="tel" name="phone" placeholder="+1 (555) 000-0000" value={form.phone} onChange={handleChange} />
+                <input id="q-phone" type="tel" name="phone" placeholder="+91 98765 43210" value={form.phone} onChange={handleChange} />
               </div>
               <div className="quote__field">
-                <label htmlFor="q-service">Service</label>
-                <select id="q-service" name="service" value={form.service} onChange={handleChange}>
-                  <option value="">Select a service</option>
-                  <option value="building">Building Solutions</option>
-                  <option value="logging">Logging Services</option>
-                  <option value="forestry">Forestry & Timber</option>
-                  <option value="shipping">Truck Shipping</option>
-                  <option value="other">Other</option>
-                </select>
+                <label htmlFor="q-material">Material & Quantity</label>
+                <input id="q-material" type="text" name="material" placeholder="e.g. 5x Oak Trunks" value={form.material} onChange={handleChange} />
               </div>
             </div>
             <div className="quote__field">
-              <label htmlFor="q-msg">Message *</label>
-              <textarea id="q-msg" name="message" rows="4" placeholder="Tell us about your project..." value={form.message} onChange={handleChange} required />
+              <label htmlFor="q-msg">Additional Details *</label>
+              <textarea id="q-msg" name="message" rows="4" placeholder="Tell us more about your requirements..." value={form.message} onChange={handleChange} required />
             </div>
             <button type="submit" className="quote__submit">
               Send Request

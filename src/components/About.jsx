@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 
 const steps = [
-  { num: '01', title: 'Harvesting', desc: 'We carefully select and harvest timber from sustainably managed forests, ensuring minimal environmental impact.' },
-  { num: '02', title: 'Manufacturing', desc: 'Our state-of-the-art sawmill processes raw timber into premium lumber products with precision and care.' },
+  { num: '01', title: 'Timber Supply', desc: 'We supply premium pine timber sourced through reliable channels, ensuring uniform grading and regular availability for bulk and ongoing requirements.' },
+  { num: '02', title: 'Sawmill & Custom Sizes', desc: 'With in-house sawmill facilities, we cut timber into customized sizes including planks and sleepers as per client specifications.' },
+  { num: '03', title: 'Packaging & Delivery', desc: 'We also provide wooden packaging solutions and coordinate bulk logistics to ensure safe and timely delivery across India.' },
 ]
 
 export default function About() {
@@ -30,7 +31,7 @@ export default function About() {
   }, [])
 
   const animateCounters = () => {
-    const targets = { years: 25, projects: 480, clients: 1200, awards: 15 }
+    const targets = { years: 30, projects: 480, clients: 1200, awards: 15 }
     const duration = 2000
     const start = Date.now()
     const tick = () => {
@@ -64,11 +65,11 @@ export default function About() {
 
           <div className="about__content-col">
             <span className="section-tag">About Us</span>
-            <h2 className="section-title">Responsible forestry & quality timber</h2>
+            <h2 className="section-title">Reliable Timber Solutions for Indian Industry</h2>
             <p className="about__desc">
-              We are a premier timber company committed to sustainable forestry practices 
-              and delivering the highest quality wood products. Our team of experienced 
-              professionals ensures every piece of timber meets rigorous standards.
+              S.A Global Venture is an India-focused timber company engaged in premium pine timber supply, in-house sawmill processing, and wooden packaging solutions. Our operations are built on over 100 years of generational involvement in the timber business, including trade in jungle wood and durable hardwood species alongside imported pine.
+              <br/><br/>
+              We support manufacturers, builders, and traders with consistent grading, accurate CFT, and reliable supply across India.
             </p>
 
             <div className="about__steps">
@@ -82,28 +83,39 @@ export default function About() {
                 </div>
               ))}
             </div>
-
-            <a href="#services" className="btn btn--primary">Our Services</a>
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="about__stats">
-          <div className="about__stat">
-            <span className="about__stat-number">{counters.years}+</span>
-            <span className="about__stat-label">Years Experience</span>
-          </div>
-          <div className="about__stat">
-            <span className="about__stat-number">{counters.projects}+</span>
-            <span className="about__stat-label">Projects Completed</span>
-          </div>
-          <div className="about__stat">
-            <span className="about__stat-number">{counters.clients}+</span>
-            <span className="about__stat-label">Happy Clients</span>
-          </div>
-          <div className="about__stat">
-            <span className="about__stat-number">{counters.awards}</span>
-            <span className="about__stat-label">Industry Awards</span>
+
+        {/* Clients We Served */}
+        <div className="about__clients">
+          <h3 className="about__clients-heading">Clients We Served</h3>
+          <p className="about__clients-subtext">Trusted by leading manufacturers, traders, and industrial brands across India</p>
+          <div className="about__clients-grid">
+            <div className="about__client-card">
+              <div className="about__client-icon-wrap"><span className="about__client-icon">🏭</span></div>
+              <span className="about__client-name">LG Electronics</span>
+            </div>
+            <div className="about__client-card">
+              <div className="about__client-icon-wrap"><span className="about__client-icon">🍪</span></div>
+              <span className="about__client-name">PriyaGold Biscuit</span>
+            </div>
+            <div className="about__client-card">
+              <div className="about__client-icon-wrap"><span className="about__client-icon">🧵</span></div>
+              <span className="about__client-name">Surya Udhyog Textile</span>
+            </div>
+            <div className="about__client-card">
+              <div className="about__client-icon-wrap"><span className="about__client-icon">🔧</span></div>
+              <span className="about__client-name">KK Rubber</span>
+            </div>
+            <div className="about__client-card">
+              <div className="about__client-icon-wrap"><span className="about__client-icon">🪵</span></div>
+              <span className="about__client-name">Pyramid Timber Associates Pvt Ltd</span>
+            </div>
+            <div className="about__client-card about__client-card--more">
+              <div className="about__client-icon-wrap"><span className="about__client-icon">✨</span></div>
+              <span className="about__client-name">And Many More Others</span>
+            </div>
           </div>
         </div>
       </div>

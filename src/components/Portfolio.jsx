@@ -4,38 +4,38 @@ const projects = [
   {
     title: 'Tree Removal',
     image: '/images/hero-forest.png',
-    category: 'Forestry',
+    category: 'TIMBER SUPPLY',
     desc: 'Safe and efficient tree removal for residential & commercial properties.',
     num: '01'
   },
   {
     title: 'Timber Purchase',
     image: '/images/hero-timber.png',
-    category: 'Trading',
+    category: 'TIMBER SUPPLY',
     desc: 'Premium timber sourced from sustainably managed forests worldwide.',
     num: '02'
   },
   {
     title: 'Quality Logging',
     image: '/images/service-logging.png',
-    category: 'Operations',
+    category: 'SAWMILL & CUTTING',
     desc: 'Modern equipment with responsible and sustainable harvesting practices.',
     num: '03'
   },
   {
     title: 'Truck Shipping',
     image: '/images/hero-sawmill.png',
-    category: 'Logistics',
+    category: 'LOGISTICS & DELIVERY',
     desc: 'Reliable nationwide delivery ensuring timber arrives in perfect condition.',
     num: '04'
   },
 ]
 
 export default function Portfolio() {
-  const [activeFilter, setActiveFilter] = useState('All')
-  const filters = ['All', 'Forestry', 'Trading', 'Operations', 'Logistics']
+  const [activeFilter, setActiveFilter] = useState('ALL')
+  const filters = ['ALL', 'TIMBER SUPPLY', 'SAWMILL & CUTTING', 'WOODEN PACKAGING', 'LOGISTICS & DELIVERY']
 
-  const filtered = activeFilter === 'All'
+  const filtered = activeFilter === 'ALL'
     ? projects
     : projects.filter(p => p.category === activeFilter)
 
@@ -45,13 +45,12 @@ export default function Portfolio() {
         {/* Header row */}
         <div className="portfolio2__header">
           <div className="portfolio2__header-left">
-            <span className="section-tag">Our Projects</span>
-            <h2 className="section-title">Crafted with Precision,<br/>Delivered with Pride</h2>
+            <span className="section-tag">OUR CAPABILITIES</span>
+            <h2 className="section-title">Built for Industry.<br/>Delivered with Reliability.</h2>
           </div>
           <div className="portfolio2__header-right">
             <p className="portfolio2__intro">
-              From sustainable harvesting to expert milling, every project reflects 
-              our commitment to quality and environmental responsibility.
+              From timber sourcing and in-house sawmill processing to wooden packaging and bulk logistics, we support industrial and commercial requirements with consistent quality and dependable supply.
             </p>
             <div className="portfolio2__filters">
               {filters.map((f) => (
