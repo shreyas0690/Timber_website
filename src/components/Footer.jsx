@@ -65,13 +65,12 @@ export default function Footer() {
               <h4 className="footer__heading">Our Location</h4>
               <div className="footer__map-wrapper">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14007.024890594647!2d78.0649!3d28.6632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c9b1f5e5e0a0f%3A0x8c2a1b5d1c5b5a0e!2sSatha%2C%20Bulandshahr%2C%20Uttar%20Pradesh%20203001!5e0!3m2!1sen!2sin!4v1709600000000!5m2!1sen!2sin"
+                  src="https://maps.google.com/maps?q=S.k.plywood,+maman+Road,+Satha+Rd,+Bulandshahr,+Uttar+Pradesh+203001&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="220"
                   style={{ border: 0, borderRadius: '12px' }}
                   allowFullScreen=""
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
                   title="SA Global Venture Office Location"
                 ></iframe>
               </div>

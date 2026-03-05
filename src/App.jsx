@@ -25,7 +25,7 @@ function App() {
           <About />
           <ClientsShowcase />
           <Services />
-          <Products />
+          <Products onQuoteClick={() => setQuoteOpen(true)} />
           <CallToAction />
         </main>
         <Footer />

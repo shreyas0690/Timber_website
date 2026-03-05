@@ -2,38 +2,38 @@ import { useState } from 'react'
 
 const projects = [
   {
-    title: 'Tree Removal',
-    image: '/images/hero-forest.png',
+    title: 'Pine Timber Supply',
+    image: '/images/Built_for_Industry/PineTimberSupply.jpeg',
     category: 'TIMBER SUPPLY',
-    desc: 'Safe and efficient tree removal for residential & commercial properties.',
+    desc: 'Premium imported pine timber available in bulk with accurate CFT measurement and consistent grading for traders, builders, and manufacturers across India.',
     num: '01'
   },
   {
-    title: 'Timber Purchase',
-    image: '/images/hero-timber.png',
+    title: 'Jungle Wood & Hardwood',
+    image: '/images/Built_for_Industry/Jungle-woods.jpeg',
     category: 'TIMBER SUPPLY',
-    desc: 'Premium timber sourced from sustainably managed forests worldwide.',
+    desc: 'Reliable supply of jungle wood and hardwood suitable for construction, furniture, and industrial applications with dependable availability.',
     num: '02'
   },
   {
-    title: 'Quality Logging',
-    image: '/images/service-logging.png',
+    title: 'Sawmill & Custom Cutting',
+    image: '/images/Built_for_Industry/Sawmil.jpeg',
     category: 'SAWMILL & CUTTING',
-    desc: 'Modern equipment with responsible and sustainable harvesting practices.',
+    desc: 'Precision sawmill services delivering customized timber sizes, planks, and sleepers according to project and packaging requirements.',
     num: '03'
   },
   {
-    title: 'Truck Shipping',
-    image: '/images/hero-sawmill.png',
-    category: 'LOGISTICS & DELIVERY',
-    desc: 'Reliable nationwide delivery ensuring timber arrives in perfect condition.',
+    title: 'Wooden Packaging Solutions',
+    image: '/images/Built_for_Industry/Wooden_packeging.jpeg',
+    category: 'WOODEN PACKAGING',
+    desc: 'Strong wooden pallets, crates, and industrial packaging materials designed for machinery transport, exports, and heavy logistics.',
     num: '04'
   },
 ]
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('ALL')
-  const filters = ['ALL', 'TIMBER SUPPLY', 'SAWMILL & CUTTING', 'WOODEN PACKAGING', 'LOGISTICS & DELIVERY']
+  const filters = ['ALL', 'TIMBER SUPPLY', 'SAWMILL & CUTTING', 'WOODEN PACKAGING']
 
   const filtered = activeFilter === 'ALL'
     ? projects
