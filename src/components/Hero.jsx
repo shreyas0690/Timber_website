@@ -116,14 +116,11 @@ export default function Hero({ onQuoteClick }) {
 
               {/* Title with word-by-word reveal */}
               <h1 className="hero2__title">
-                {slide.title.split(' ').map((word, wi, arr) => (
-                  <span key={wi}>
-                    <span className="hero2__title-word" style={{ transitionDelay: `${0.4 + wi * 0.08}s` }}>
-                      <span className={word.toLowerCase() === slide.highlight.toLowerCase() ? 'hero2__title-highlight' : ''}>
-                        {word}
-                      </span>
+                {slide.title.split(' ').map((word, wi) => (
+                  <span key={wi} className="hero2__title-word" style={{ transitionDelay: `${0.4 + wi * 0.08}s` }}>
+                    <span className={word.toLowerCase() === slide.highlight.toLowerCase() ? 'hero2__title-highlight' : ''}>
+                      {word}
                     </span>
-                    {wi < arr.length - 1 && ' '}
                   </span>
                 ))}
               </h1>
