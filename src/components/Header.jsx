@@ -1,27 +1,22 @@
 import { useState, useEffect } from 'react'
-import { useCart } from '../context/CartContext'
+
 
 const navLinks = [
   { label: 'Home', href: '#' },
+  { label: 'About Us', href: '#about' },
   {
-    label: 'Pages',
-    href: '#',
+    label: 'Our Services',
+    href: '#portfolio',
     submenu: [
-      { label: 'About Us', href: '#about' },
-      { label: 'Our Services', href: '#services' },
-      { label: 'Our Team', href: '#about' },
-      { label: 'FAQs', href: '#' },
-      { label: 'Pricing', href: '#products' },
-      { label: 'Contact', href: '#footer' },
+      { label: 'Timber Supply', href: '#portfolio' },
+      { label: 'Wooden Packaging', href: '#portfolio' },
+      { label: 'Sawmill & Custom Sizes', href: '#portfolio' },
     ]
   },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Our Services', href: '#services' },
-  { label: 'Shop', href: '#products' },
+  { label: 'Contact', href: '#footer' },
 ]
 
 export default function Header({ onQuoteClick }) {
-  const { count, setIsOpen } = useCart()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState(null)
@@ -88,13 +83,6 @@ export default function Header({ onQuoteClick }) {
 
           <div className="header__actions">
             <button onClick={onQuoteClick} className="btn btn--primary header__cta-btn">Request a Quote</button>
-            <button className="header__cart-btn" onClick={() => setIsOpen(true)} aria-label="Cart">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
-              </svg>
-              {count > 0 && <span className="header__cart-count">{count}</span>}
-            </button>
             <button
               className={`header__hamburger ${mobileOpen ? 'header__hamburger--open' : ''}`}
               onClick={() => setMobileOpen(!mobileOpen)}
