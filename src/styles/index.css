@@ -3836,10 +3836,16 @@ ul {
     flex-direction: column;
     gap: 24px;
     align-items: flex-start;
+    text-align: left;
   }
 
   .portfolio2__header-right {
     max-width: 100%;
+  }
+
+  .portfolio2__header-left .section-title,
+  .portfolio2__intro {
+    text-align: left;
   }
 
 
