@@ -44,11 +44,11 @@ export default function Header({ onQuoteClick }) {
       <div className="header__main">
         <div className="container header__main-inner">
           <a href="#" className="header__logo">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <rect x="2" y="2" width="36" height="36" rx="4" stroke="currentColor" strokeWidth="2"/>
-              <path d="M12 28V14l8 8 8-8v14" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <span>Timber<em>Co</em></span>
+            <img src="/images/SA_logo_cropped_transparent.png" alt="SA Global Venture" className="header__logo-img" />
+            <span className="header__logo-text">
+              <span className="header__logo-name">S.A Global</span>
+              <span className="header__logo-sub">Venture</span>
+            </span>
           </a>
 
           <nav className={`header__nav ${mobileOpen ? 'header__nav--open' : ''}`}>

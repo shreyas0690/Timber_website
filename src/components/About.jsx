@@ -55,7 +55,7 @@ export default function About() {
         <div className="about__grid">
           <div className="about__image-col">
             <div className="about__image-wrapper">
-              <img src="/images/about-owner.png" alt="Peter Bowman - Sawmill Owner" loading="lazy" />
+              <img src="/images/sparsh.png" alt="SA Global Venture" loading="lazy" />
               <div className="about__image-badge">
                 <span className="about__badge-number">{counters.years}+</span>
                 <span className="about__badge-text">Years of<br/>Experience</span>

@@ -266,19 +266,35 @@ ul {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--color-dark);
+}
+
+.header__logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.header__logo-name {
   font-family: var(--font-heading);
-  font-size: 1.625rem;
+  font-size: 1.35rem;
   font-weight: 700;
+  color: var(--color-dark);
+  letter-spacing: 0.04em;
 }
 
-.header__logo em {
-  font-style: normal;
+.header__logo-sub {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--color-primary);
-}
-
-.header__logo svg {
-  color: var(--color-primary);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .header__nav-list {
